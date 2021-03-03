@@ -3,7 +3,7 @@ import "./Layout.css";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
 
-const Layout = () => {
+const Layout = (props) => {
   return (
     <div className="layout">
       <Nav />
