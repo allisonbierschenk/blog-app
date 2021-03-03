@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Redirect, useHistory, useParams } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
-import { getPost } from "../../services/posts";
+import { deletePost, getPost } from "../../services/posts";
 
 export default function PostDetail(props) {
   const [post, setPost] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
 
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -21,6 +22,10 @@ export default function PostDetail(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+  function deleteThisPost() {
+    deletePost(post._id);
+    history.push("/");
+  }
 
   return (
     <Layout>
@@ -29,8 +34,10 @@ export default function PostDetail(props) {
         <div className="detail-author">{post.author}</div>
         <img className="detail-image" src={post.imgURL} alt={post.title} />
         <div className="detail-content">{post.content}</div>
-        <button classname="edit-button">Edit</button>
-        <button className="delete-button">Delete</button>
+        <button className="edit-button">Edit</button>
+        <button className="delete-button" onClick={deleteThisPost}>
+          Delete
+        </button>
       </div>
     </Layout>
   );
