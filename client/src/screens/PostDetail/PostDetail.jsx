@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useHistory, useParams, Link } from "react-router-dom";
+import { useHistory, useParams, Link } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import { deletePost, getPost } from "../../services/posts";
 
