@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Redirect, useHistory, useParams } from "react-router-dom";
+import { Redirect, useHistory, useParams, Link } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import { deletePost, getPost } from "../../services/posts";
 
@@ -34,7 +34,11 @@ export default function PostDetail(props) {
         <div className="detail-author">{post.author}</div>
         <img className="detail-image" src={post.imgURL} alt={post.title} />
         <div className="detail-content">{post.content}</div>
-        <button className="edit-button">Edit</button>
+        <button className="edit-button">
+          <Link className="edit-link" to={`/posts/${post._id}/edit`}>
+            Edit
+          </Link>
+        </button>
         <button className="delete-button" onClick={deleteThisPost}>
           Delete
         </button>
