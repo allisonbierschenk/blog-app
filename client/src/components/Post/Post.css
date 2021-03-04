@@ -19,5 +19,5 @@ a {
   height: 150px;
   width: auto;
   margin: 2px;
-  overflow: auto;
+  margin: 1vw;
 }
