@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
 nav {
   flex: 3r;
   position: fixed;
@@ -24,6 +24,7 @@ nav {
 }
 
 .logo {
+  font-family: "Skranji", cursive;
   text-align: center;
   font-weight: bolder;
   text-transform: uppercase;
@@ -35,7 +36,6 @@ nav {
 }
 
 .logo:hover {
-  
 }
 
 .links {
@@ -54,7 +54,7 @@ nav {
 }
 
 .link:hover {
-    transform: scale(1.06);
+  transform: scale(1.06);
 }
 
 a {

@@ -1,10 +1,19 @@
 import React from "react";
 
 function Sort(props) {
+  const handleChange = (e) => {
+    props.onChange(e.target.value);
+  };
   return (
-    <div>
-      <select name="" id=""></select>
-    </div>
+    <form className="sort-container">
+      <label htmlFor="sort">Sort By:</label>
+      <select name="Sort" id="sort" onChange={handleChange}>
+        <option value="title-acending">Title A-Z</option>
+        <option value="title-descending">Title Z-A</option>
+        <option value="author-ascending">Author A-Z</option>
+        <option value="authon-descending">Author Z-A</option>
+      </select>
+    </form>
   );
 }
 

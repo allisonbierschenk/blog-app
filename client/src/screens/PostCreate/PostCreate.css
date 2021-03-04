@@ -14,6 +14,7 @@
 }
 .create-form input,
 .create-form textarea {
+  font-family: "Raleway", sans-serif;
   margin: 10px;
   width: 50vw;
   background-color: #e9edc9;

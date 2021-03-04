@@ -1,2 +1,12 @@
-.searchbar {
+.search-container {
+  width: 60vw;
+}
+.search-container input {
+  width: 100%;
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+  border: 2px solid #ccd5ae;
+  box-shadow: 7px 7px rgba(102, 59, 59, 0.15);
+  padding-left: 10px;
 }
