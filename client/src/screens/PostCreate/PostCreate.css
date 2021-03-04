@@ -1,6 +1,8 @@
 .form-heading {
   font-family: "Raleway", sans-serif;
-  font-size: 50px;
+  font-size: 8vw;
+  width: 80vw;
+  color: #4d5926;
 }
 .create-form {
   display: flex;

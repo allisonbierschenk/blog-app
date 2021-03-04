@@ -1,11 +1,14 @@
 .edit-heading {
   font-family: "Raleway", sans-serif;
-  font-size: 50px;
+  font-size: 10vw;
+  width: 80vw;
+  color: #4d5926;
 }
 .form-photo-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   background-color: #e9edc9;
   width: 80vw;
   padding: 20px;
@@ -50,4 +53,17 @@
   border-radius: 3px;
   color: #fefae0;
   padding: 5px;
+}
+@media only screen and (max-width: 800px) {
+  .form-photo-container {
+    flex-flow: column nowrap;
+  }
+  .edit-form input,
+  .edit-form textarea {
+    width: 70vw;
+  }
+  .preview-image {
+    width: 70vw;
+    height: 70vw;
+  }
 }
