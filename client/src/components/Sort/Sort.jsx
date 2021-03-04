@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sort.css";
 
 function Sort(props) {
   const handleChange = (e) => {
