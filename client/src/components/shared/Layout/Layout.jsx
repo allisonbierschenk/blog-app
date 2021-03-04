@@ -2,6 +2,7 @@ import React from "react";
 import "./Layout.css";
 import Nav from "../Nav/Nav";
 import Footer from "../Footer/Footer";
+import "./Layout.css";
 
 const Layout = (props) => {
   return (
