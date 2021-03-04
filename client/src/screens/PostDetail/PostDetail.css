@@ -1,16 +1,22 @@
-.container {
-  background-color: #fefae0;
-}
 .detail-container {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-width: 100vw;
+}
+.detail-col1 {
+  display: flex;
   flex-direction: column;
-  background-color: #fefae0;
-  margin: 50px 50px 0px 50px;
+}
+.detail-col2 {
+  display: flex;
+  flex-direction: column;
 }
 .detail-title {
-  font-size: 50px;
+  font-size: 45px;
+  text-align: left;
   border-bottom: 2px solid grey;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-weight: bold;
   text-decoration: border;
   color: #767e5b;
@@ -19,30 +25,26 @@
 }
 .detail-author {
   font-size: 20px;
-  order: 1;
+  order: 2;
   text-align: left;
   color: gray;
 }
-.detail-img img {
-  justify-content: center;
-  height: 200vh;
-  width: 200vw;
-  object-fit: contain;
-  background-size: contain;
+.detail-image {
+  align-self: center;
+  max-width: 50vw;
+  order: 3;
 }
 .detail-content {
   font-size: 18px;
   text-align: left;
-  flex-flow: wrap;
   padding: 20px;
-  order: 2;
-
-  /* for smaller screen display: block;
-  height: 200px;
-  overflow: scroll; */
+  margin-top: 10vh;
+  order: 1;
+  height: 70vh;
+  overflow: scroll;
 }
 .detail-buttons {
-  order: 3;
+  order: 4;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -52,12 +54,15 @@
   margin: 10px;
   justify-content: center;
   background: #ccd5ae;
+  color: black;
   align-items: baseline;
   border: none;
+  box-shadow: 4px 4px #767e5b85;
+  font-size: 25px;
 }
 .detail-container button:hover {
   background: #d1d6c1;
-  font-size: 25px;
+  font-size: 28px;
 }
 a:visited {
   text-decoration: none;
@@ -66,4 +71,19 @@ a:visited {
 .edit-link a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100vw;
+  }
+  .detail-content {
+    font-size: 15px;
+    display: block;
+    height: 30vh;
+    overflow: scroll;
+  }
 }

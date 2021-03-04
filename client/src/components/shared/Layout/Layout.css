@@ -3,7 +3,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  background-color: #fefae0;
 }
 
 .layout-children {

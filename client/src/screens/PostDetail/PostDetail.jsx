@@ -30,11 +30,13 @@ export default function PostDetail(props) {
 
   return (
     <Layout>
-      <div className="container">
-        <div className="detail-container">
+      <div className="detail-container">
+        <div className="detail-col1">
           <div className="detail-title">{post.title}</div>
-          <div className="detail-author">By: {post.author}</div>
           <img className="detail-image" src={post.imgURL} alt={post.title} />
+          <div className="detail-author">By: {post.author}</div>
+        </div>
+        <div className="detail-col2">
           <div className="detail-content">{post.content}</div>
           <div className="detail-buttons">
             <button className="edit-button">
