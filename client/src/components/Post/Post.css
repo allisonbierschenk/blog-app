@@ -1,13 +1,14 @@
 .post {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
-  border: 1px black solid;
-  height: 300px;
+  height: auto;
   width: 260px;
-  padding: 5px;
   margin: 1vw;
+  background-color: white;
+  color: #48502a;
+  box-shadow: 7px 7px rgba(102, 59, 59, 0.15);
 }
 
 a {
@@ -15,9 +16,43 @@ a {
 }
 
 .post-image {
-  display: flex;
-  justify-content: flex-end;
-  height: 150px;
-  width: auto;
-  margin: 2px;
+  height: auto;
+  width: 260px;
+}
+
+.post-title {
+  text-align: left;
+  padding: 10px;
+  font-size: 24px;
+  color: #48502a;
+}
+
+.post-author {
+  align-self: flex-end;
+  padding: 10px;
+  color: #48502a;
+}
+
+.post-headline {
+  text-align: left;
+  padding: 10px;
+  color: #48502a;
+  font-weight: bold;
+  font-size: 18px;
+}
+.post-inline-styling {
+  color: black;
+}
+/* https://freefrontend.com/css-border-examples/ */
+.post:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
+  box-shadow: 5px 5px rgba(36, 40, 21, 0.132);
+}
+
+.post-headline:hover,
+.post-title:hover {
+  color: #d4a373;
 }

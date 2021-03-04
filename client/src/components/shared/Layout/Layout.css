@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-
 .layout {
   display: flex;
   flex-direction: column;
@@ -11,5 +10,11 @@
   flex-flow: column nowrap;
   align-items: center;
   flex: 2;
-  padding: 20vh;
+  padding: 10vh;
+}
+
+@media (max-width: 500px) {
+  .layout-children {
+    padding: 5vh;
+  }
 }
