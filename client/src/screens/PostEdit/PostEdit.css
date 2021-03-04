@@ -1,9 +1,14 @@
+.edit-heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 50px;
+}
 .form-photo-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   background-color: #e9edc9;
   width: 80vw;
+  padding: 20px;
 }
 .preview-image {
   width: 40vw;
