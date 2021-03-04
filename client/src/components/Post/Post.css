@@ -1,13 +1,12 @@
 .post {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   border: 1px black solid;
   height: 300px;
   width: 260px;
   padding: 5px;
-  margin-top: 20px;
 }
 
 a {
