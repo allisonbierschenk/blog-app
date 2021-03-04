@@ -7,6 +7,7 @@
   height: 300px;
   width: 260px;
   padding: 5px;
+  margin: 1vw;
 }
 
 a {
@@ -19,5 +20,4 @@ a {
   height: 150px;
   width: auto;
   margin: 2px;
-  margin: 1vw;
 }
