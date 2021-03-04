@@ -36,6 +36,7 @@ function PostCreate(props) {
 
   return (
     <Layout>
+      <div className="form-heading">Contribute a Post:</div>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           type="text"

@@ -29,6 +29,9 @@ const Home = (props) => {
 
   return (
     <Layout>
+      <div className="search">
+        <input type="text" />
+      </div>
       <div className="display-posts">{displayPosts}</div>
     </Layout>
   );

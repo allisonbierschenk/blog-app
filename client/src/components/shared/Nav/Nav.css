@@ -1,55 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
 nav {
-    flex: 3r;
-    position: fixed;
-    width: 100%;
-    background-color: #CCD5AE;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    font-family: 'Raleway', sans-serif;
+  flex: 3r;
+  position: fixed;
+  width: 100%;
+  background-color: #ccd5ae;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 .nav {
-    display: flex;
-    padding: 25px 0;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    box-shadow: 1px 1px 1px .3px #FEFAE0;
-    width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 25px 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  box-shadow: 1px 1px 1px 0.3px #fefae0;
+  width: 100%;
 }
 
 .logo {
-    text-align: center;
-    font-weight:bolder;
-    text-transform: uppercase;
-    font-size: 30px;
-    letter-spacing: 2px;
-    flex: 1;
-    max-width: 25%;
-    transition: 300ms all;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2px;
+  flex: 1;
+  max-width: 25%;
+  transition: 300ms all;
+  margin-left: 30px;
 }
 
 .logo:hover {
-    transform: scale(1.002);
+  transform: scale(1.002);
 }
 
 .links {
-    flex: 2;
-    max-width: 20vw;
-    align-items:center;
-    font-size: 19px;
-    display: flex;
-    text-transform: uppercase;
+  flex: 2;
+  max-width: 20vw;
+  align-items: center;
+  font-size: 19px;
+  display: flex;
+  text-transform: uppercase;
+  margin-right: 50px;
 }
 
 .link {
-    flex: 1;
+  flex: 1;
 }
 
 a {
-    text-decoration: none;
-    color:#4d5926;
+  text-decoration: none;
+  color: #4d5926;
 }

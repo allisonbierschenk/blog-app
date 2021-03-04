@@ -46,6 +46,7 @@ function PostEdit(props) {
 
   return (
     <Layout>
+      <div className="edit-heading">Edit Your Post:</div>
       <div className="form-photo-container">
         <img className="preview-image" src={post.imgURL} alt={post.imgURL} />
         <form className="edit-form" onSubmit={handleSubmit}>
