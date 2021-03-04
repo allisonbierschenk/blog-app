@@ -7,11 +7,11 @@ const Nav = () => {
     <nav>
       <div className="nav">
         <NavLink className="logo" to="/">
-          Blog
+          Uno Moss
         </NavLink>
         <div className="links">
           <NavLink className="link" to="/add-post">
-            Add Post
+            Plant Your Post
           </NavLink>
         </div>
       </div>

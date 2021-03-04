@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams, Link } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 import { deletePost, getPost } from "../../services/posts";
+import "./PostDetail.css";
 
 export default function PostDetail(props) {
   const [post, setPost] = useState(null);
@@ -29,19 +30,23 @@ export default function PostDetail(props) {
 
   return (
     <Layout>
-      <div className="detail-container">
-        <div className="detail-title">{post.title}</div>
-        <div className="detail-author">{post.author}</div>
-        <img className="detail-image" src={post.imgURL} alt={post.title} />
-        <div className="detail-content">{post.content}</div>
-        <button className="edit-button">
-          <Link className="edit-link" to={`/posts/${post._id}/edit`}>
-            Edit
-          </Link>
-        </button>
-        <button className="delete-button" onClick={deleteThisPost}>
-          Delete
-        </button>
+      <div className="container">
+        <div className="detail-container">
+          <div className="detail-title">{post.title}</div>
+          <div className="detail-author">By: {post.author}</div>
+          <img className="detail-image" src={post.imgURL} alt={post.title} />
+          <div className="detail-content">{post.content}</div>
+          <div className="detail-buttons">
+            <button className="edit-button">
+              <Link className="edit-link" to={`/posts/${post._id}/edit`}>
+                Edit
+              </Link>
+            </button>
+            <button className="delete-button" onClick={deleteThisPost}>
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     </Layout>
   );
