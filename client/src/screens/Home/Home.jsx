@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getPosts } from "../../services/posts";
 import Post from "../../components/Post/Post";
+import "./Home.css";
 
 const Home = (props) => {
   const [allPosts, setAllPosts] = useState([]);
@@ -22,13 +23,13 @@ const Home = (props) => {
       title={post.title}
       author={post.author}
       imgURL={post.imgURL}
-      headline={post.healine}
+      headline={post.headline}
     />
   ));
 
   return (
     <Layout>
-      <div>{displayPosts}</div>
+      <div className="display-posts">{displayPosts}</div>
     </Layout>
   );
 };
