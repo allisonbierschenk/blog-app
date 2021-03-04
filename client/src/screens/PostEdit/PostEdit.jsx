@@ -3,6 +3,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { Redirect, useParams } from "react-router-dom";
 import { getPost, updatePost } from "../../services/posts";
 import { useState, useEffect } from "react";
+import "./PostEdit.css";
 
 function PostEdit(props) {
   const [post, setPost] = useState({
@@ -45,55 +46,58 @@ function PostEdit(props) {
 
   return (
     <Layout>
-      <form className="edit-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          className="input-title"
-          placeholder="Title"
-          value={post.title}
-          required
-          name="title"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="input-author"
-          placeholder="Author"
-          value={post.author}
-          required
-          name="author"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="input-image"
-          placeholder="Image URL"
-          value={post.imgURL}
-          required
-          name="imgURL"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          className="input-headline"
-          placeholder="Headline"
-          value={post.headline}
-          required
-          name="headline"
-          onChange={handleChange}
-        />
-        <textarea
-          className="input-content"
-          placeholder="Content"
-          value={post.content}
-          required
-          name="content"
-          onChange={handleChange}
-        />
-        <button type="submit" className="save-button">
-          Save
-        </button>
-      </form>
+      <div className="form-photo-container">
+        <img className="preview-image" src={post.imgURL} alt={post.imgURL} />
+        <form className="edit-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            className="input-title"
+            placeholder="Title"
+            value={post.title}
+            required
+            name="title"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input-author"
+            placeholder="Author"
+            value={post.author}
+            required
+            name="author"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input-image"
+            placeholder="Image URL"
+            value={post.imgURL}
+            required
+            name="imgURL"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            className="input-headline"
+            placeholder="Headline"
+            value={post.headline}
+            required
+            name="headline"
+            onChange={handleChange}
+          />
+          <textarea
+            className="input-content"
+            placeholder="Content"
+            value={post.content}
+            required
+            name="content"
+            onChange={handleChange}
+          />
+          <button type="submit" className="save-button">
+            Save
+          </button>
+        </form>
+      </div>
     </Layout>
   );
 }

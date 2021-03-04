@@ -1,1 +1,17 @@
-/* shell */
+.create-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 30px;
+  background-color: #e9edc9;
+  border-radius: 10px;
+}
+.create-form input,
+.create-form textarea {
+  margin: 10px;
+  width: 50vw;
+}
+.create-form textarea {
+  resize: vertical;
+  min-height: 200px;
+}
