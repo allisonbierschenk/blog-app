@@ -4,6 +4,7 @@ import { getPosts } from "../../services/posts";
 import Post from "../../components/Post/Post";
 import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
+import { AZTitle, ZATitle, AZAuthor, ZAAuthor } from "../../utils/sort";
 import "./Home.css";
 
 const Home = (props) => {
@@ -15,36 +16,37 @@ const Home = (props) => {
     const fetchPosts = async () => {
       const posts = await getPosts();
       setAllPosts(posts);
+      console.log(allPosts);
       setQueriedPosts(posts);
       console.log(posts);
     };
     fetchPosts();
   }, []);
-  // const handleSort = (type) => {
-  //   setSortType(type);
-  //   switch (type) {
-  //     case "title-ascending":
-  //       setQueriedPosts(AZTitle(queriedPosts));
-  //       break;
-  //     case "title-descending":
-  //       setQueriedPosts(ZATitle(queriedPosts));
-  //       break;
-  //     case "author-ascending":
-  //       setQueriedPosts(AZAuthor(queriedPosts));
-  //       break;
-  //     case "author-descending":
-  //       setQueriedPosts(ZAAuthor(queriedPosts));
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // };
+  const handleSort = (type) => {
+    setSortType(type);
+    switch (type) {
+      case "title-ascending":
+        setQueriedPosts(AZTitle(queriedPosts));
+        break;
+      case "title-descending":
+        setQueriedPosts(ZATitle(queriedPosts));
+        break;
+      case "author-ascending":
+        setQueriedPosts(AZAuthor(queriedPosts));
+        break;
+      case "author-descending":
+        setQueriedPosts(ZAAuthor(queriedPosts));
+        break;
+      default:
+        break;
+    }
+  };
 
   const handleSearch = (e) => {
     const filteredPosts = allPosts.filter((post) =>
       post.author.toUpperCase().includes(e.target.value.toUpperCase())
     );
-    setQueriedPosts(filteredPosts);
+    setQueriedPosts(filteredPosts, () => handleSort(sortType));
   };
   const handleSubmit = (e) => e.preventDefault();
 
@@ -62,7 +64,7 @@ const Home = (props) => {
   return (
     <Layout>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
-      {/* <Sort onSubmit={handleSubmit} onChange={handleSort} /> */}
+      <Sort onSubmit={handleSubmit} onChange={handleSort} />
       <div className="display-posts">{displayPosts}</div>
     </Layout>
   );
