@@ -5,3 +5,6 @@
 .sort-container label {
   margin: 5px;
 }
+#sort {
+  outline: none;
+}
