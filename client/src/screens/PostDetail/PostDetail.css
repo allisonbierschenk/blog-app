@@ -18,7 +18,7 @@
 .detail-title {
   font-size: 45px;
   text-align: left;
-  font-family: "Skranji", cursive;
+  font-family: "Raleway", cursive;
   border-bottom: 2px solid #ccd5ae;
   margin-bottom: 10px;
   font-weight: bold;
@@ -49,6 +49,9 @@
   order: 1;
   height: 40vh;
   overflow: scroll;
+}
+.detail-content::-webkit-scrollbar {
+  display: none;
 }
 .detail-buttons {
   order: 4;

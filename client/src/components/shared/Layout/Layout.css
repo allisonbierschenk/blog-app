@@ -11,6 +11,7 @@
   align-items: center;
   flex: 2;
   padding: 10vh;
+  margin-top: 80px;
 }
 
 @media (max-width: 500px) {

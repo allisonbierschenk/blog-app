@@ -1,1 +1,7 @@
-//dummy comment for push
+.sort-container {
+  margin: 20px;
+  font-family: "Raleway", sans-serif;
+}
+.sort-container label {
+  margin: 5px;
+}
