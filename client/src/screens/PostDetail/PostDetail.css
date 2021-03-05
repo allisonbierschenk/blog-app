@@ -1,16 +1,26 @@
-.container {
-  background-color: #fefae0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
 .detail-container {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 100vw;
+}
+.detail-col1 {
+  display: flex;
   flex-direction: column;
-  background-color: #fefae0;
-  margin: 50px 50px 0px 50px;
+}
+.detail-col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .detail-title {
-  font-size: 50px;
-  border-bottom: 2px solid grey;
-  margin-bottom: 30px;
+  font-size: 45px;
+  text-align: left;
+  font-family: "Raleway", cursive;
+  border-bottom: 2px solid #ccd5ae;
+  margin-bottom: 10px;
   font-weight: bold;
   text-decoration: border;
   color: #767e5b;
@@ -18,46 +28,52 @@
   order: 1;
 }
 .detail-author {
+  font-family: "Raleway", sans-serif;
   font-size: 20px;
-  order: 1;
+  order: 2;
   text-align: left;
-  color: gray;
+  color: #767e5b;
 }
-.detail-img img {
-  justify-content: center;
-  height: 200vh;
-  width: 200vw;
-  object-fit: contain;
-  background-size: contain;
+.detail-image {
+  align-self: center;
+  max-width: 50vw;
+  order: 3;
+  box-shadow: 2px 4px 3px 2px #d4a373;
 }
 .detail-content {
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
   text-align: left;
-  flex-flow: wrap;
   padding: 20px;
-  order: 2;
-
-  /* for smaller screen display: block;
-  height: 200px;
-  overflow: scroll; */
+  margin-top: 10vh;
+  order: 1;
+  height: 40vh;
+  overflow: scroll;
+}
+.detail-content::-webkit-scrollbar {
+  display: none;
 }
 .detail-buttons {
-  order: 3;
+  order: 4;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .detail-container button {
+  font-family: "Raleway", sans-serif;
   padding: 10px;
   margin: 10px;
   justify-content: center;
   background: #ccd5ae;
+  color: black;
   align-items: baseline;
   border: none;
+  box-shadow: 2px 4px 4px #767e5b85;
+  font-size: 25px;
 }
 .detail-container button:hover {
-  background: #d1d6c1;
-  font-size: 25px;
+  background: #e9edc9;
+  font-size: 26px;
 }
 a:visited {
   text-decoration: none;
@@ -66,4 +82,37 @@ a:visited {
 .edit-link a {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .detail-image {
+    align-self: center;
+    max-width: 40vw;
+    order: 3;
+    box-shadow: 2px 4px 3px 2px #d4a373;
+  }
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100vw;
+  }
+  .detail-content {
+    font-size: 15px;
+    display: block;
+    height: 30vh;
+    overflow: scroll;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .detail-title {
+    font-size: 30px;
+  }
+  .detail-author {
+    font-size: 15px;
+  }
+  .detail-container button {
+    font-size: 15px;
+  }
 }

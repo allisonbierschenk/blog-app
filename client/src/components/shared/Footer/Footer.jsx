@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <p>Made by: Chillset team</p>
+      <p>Made by: Team Uno Moss</p>
     </footer>
   );
 };

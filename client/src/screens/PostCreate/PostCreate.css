@@ -1,17 +1,42 @@
+.form-heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 8vw;
+  width: 80vw;
+  color: #4d5926;
+}
 .create-form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   margin: 30px;
   background-color: #e9edc9;
-  border-radius: 10px;
+  padding: 20px;
 }
 .create-form input,
 .create-form textarea {
+  font-family: "Raleway", sans-serif;
   margin: 10px;
   width: 50vw;
+  background-color: #e9edc9;
+  border: 1px solid #d4a373;
+  box-shadow: 2px 2px 5px #d4a373;
 }
 .create-form textarea {
   resize: vertical;
   min-height: 200px;
+}
+.create-form textarea:focus,
+.create-form input:focus {
+  outline: none !important ;
+  border: 3px solid #d4a373;
+}
+.create-form textarea::-webkit-scrollbar {
+  display: none;
+}
+.create-form button {
+  background-color: #d4a373;
+  border: none;
+  border-radius: 3px;
+  color: #fefae0;
+  padding: 5px;
 }

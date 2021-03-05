@@ -1,9 +1,17 @@
+.edit-heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 10vw;
+  width: 80vw;
+  color: #4d5926;
+}
 .form-photo-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  align-items: center;
   background-color: #e9edc9;
   width: 80vw;
+  padding: 20px;
 }
 .preview-image {
   width: 40vw;
@@ -26,6 +34,7 @@
   /* border: none; */
   border: 1px solid #d4a373;
   box-shadow: 2px 2px 5px #d4a373;
+  font-family: "Raleway", sans-serif;
 }
 .edit-form textarea {
   resize: vertical;
@@ -45,4 +54,17 @@
   border-radius: 3px;
   color: #fefae0;
   padding: 5px;
+}
+@media only screen and (max-width: 800px) {
+  .form-photo-container {
+    flex-flow: column nowrap;
+  }
+  .edit-form input,
+  .edit-form textarea {
+    width: 70vw;
+  }
+  .preview-image {
+    width: 70vw;
+    height: 70vw;
+  }
 }

@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-
 .layout {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  background-color: #fefae0;
 }
 
 .layout-children {
@@ -11,5 +10,12 @@
   flex-flow: column nowrap;
   align-items: center;
   flex: 2;
-  padding: 20vh;
+  padding: 10vh;
+  margin-top: 80px;
+}
+
+@media (max-width: 500px) {
+  .layout-children {
+    padding: 5vh;
+  }
 }
