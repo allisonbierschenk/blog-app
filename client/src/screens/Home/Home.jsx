@@ -16,9 +16,7 @@ const Home = (props) => {
     const fetchPosts = async () => {
       const posts = await getPosts();
       setAllPosts(posts);
-      console.log(allPosts);
       setQueriedPosts(posts);
-      console.log(posts);
     };
     fetchPosts();
   }, []);
